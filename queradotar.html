@@ -1,0 +1,782 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Quer Adotar | Petszy</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Fascinate+Inline&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+
+<body class="adotar">
+
+
+    <!-- CABEÇALHO -->
+
+    <header class="adotar-header">
+
+        <a href="#" class="logo">Petszy</a>
+
+        <nav class="nav">
+
+            <a href="index.html">Home</a>
+
+            <a href="queradotar.html">Quer adotar?</a>
+
+            <a href="querajudar.html">Quer ajudar?</a>
+
+            <a href="contato.html">Contato</a>
+
+        </nav>
+
+
+        <div class="menu-hamburguer" onclick="abrirMenu()">
+
+            <div class="linha"></div>
+            <div class="linha"></div>
+            <div class="linha"></div>
+
+        </div>
+
+    </header>
+
+
+
+    <!-- CONTEÚDO -->
+
+    <section class="adotar">
+
+        <h2>Encontre seu novo melhor amigo 🐾</h2>
+
+        <p class="texto-adocao">
+            Passe o mouse sobre os animais para conhecer mais sobre eles!
+        </p>
+
+
+
+        <!-- FILTROS -->
+
+        <div class="filtros">
+
+            <!-- FILTRO ANIMAL -->
+
+            <div class="filtro">
+
+                <label for="tipo-animal">Animal:</label>
+
+                <select id="tipo-animal" onchange="filtrarAnimais()">
+
+                    <option value="todos">Todos</option>
+
+                    <option value="cachorro">🐶 Cachorros</option>
+
+                    <option value="gato">🐱 Gatos</option>
+
+                </select>
+
+            </div>
+
+
+            <!-- FILTRO IDADE -->
+
+            <div class="filtro">
+
+                <label for="idade-animal">Idade:</label>
+
+                <select id="idade-animal" onchange="filtrarAnimais()">
+
+                    <option value="todas">Todas as idades</option>
+
+                    <option value="0-3">0 a 3 anos</option>
+
+                    <option value="3-9">3 a 9 anos</option>
+
+                    <option value="9-13">9 a 13 anos</option>
+
+                </select>
+
+            </div>
+
+
+            <!-- FILTRO SEXO -->
+
+            <div class="filtro">
+
+                <label for="sexo-animal">Sexo:</label>
+
+                <select id="sexo-animal" onchange="filtrarAnimais()">
+
+                    <option value="todos">Todos</option>
+
+                    <option value="femea">♀ Fêmeas</option>
+
+                    <option value="macho">♂ Machos</option>
+
+                </select>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- ANIMAIS -->
+
+        <div class="animais-container">
+
+
+
+            <!-- THOR -->
+
+            <div class="animal"
+                 data-tipo="cachorro"
+                 data-idade="2"
+                 data-sexo="macho">
+
+                <div class="foto">
+
+                    <img
+                        src="https://images.unsplash.com/photo-1552053831-71594a27632d?auto=format&fit=crop&w=500&q=80"
+                        alt="Thor"
+                    >
+
+                </div>
+
+                <div class="popup">
+
+                    <h3>Thor 🐶</h3>
+
+                    <p><strong>Idade:</strong> 2 anos</p>
+
+                    <p><strong>Sexo:</strong> Macho</p>
+
+                    <p><strong>Encontrado:</strong> Próximo a uma praça.</p>
+
+                    <p>
+                        <strong>Personalidade:</strong>
+                        Brincalhão, carinhoso e muito animado.
+                    </p>
+
+                    <button onclick="adotar('Thor')">
+                        QUERO ADOTAR ❤️
+                    </button>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- BOB -->
+
+            <div class="animal"
+                 data-tipo="cachorro"
+                 data-idade="4"
+                 data-sexo="macho">
+
+                <div class="foto">
+
+                    <img
+                        src="https://images.unsplash.com/photo-1517849845537-4d257902454a?auto=format&fit=crop&w=500&q=80"
+                        alt="Bob"
+                    >
+
+                </div>
+
+                <div class="popup">
+
+                    <h3>Bob 🐶</h3>
+
+                    <p><strong>Idade:</strong> 4 anos</p>
+
+                    <p><strong>Sexo:</strong> Macho</p>
+
+                    <p><strong>Encontrado:</strong> Resgatado enquanto andava sozinho.</p>
+
+                    <p>
+                        <strong>Personalidade:</strong>
+                        Tranquilo, companheiro e obediente.
+                    </p>
+
+                    <button onclick="adotar('Bob')">
+                        QUERO ADOTAR ❤️
+                    </button>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- LUNA -->
+
+            <div class="animal"
+                 data-tipo="gato"
+                 data-idade="1"
+                 data-sexo="femea">
+
+                <div class="foto">
+
+                    <img
+                        src="https://images.unsplash.com/photo-1574158622682-e40e69881006?auto=format&fit=crop&w=500&q=80"
+                        alt="Luna"
+                    >
+
+                </div>
+
+                <div class="popup">
+
+                    <h3>Luna 🐱</h3>
+
+                    <p><strong>Idade:</strong> 1 ano</p>
+
+                    <p><strong>Sexo:</strong> Fêmea</p>
+
+                    <p><strong>Encontrada:</strong> Em frente a uma casa.</p>
+
+                    <p>
+                        <strong>Personalidade:</strong>
+                        Curiosa, carinhosa e brincalhona.
+                    </p>
+
+                    <button onclick="adotar('Luna')">
+                        QUERO ADOTAR ❤️
+                    </button>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- SIMBA -->
+
+            <div class="animal"
+                 data-tipo="gato"
+                 data-idade="3"
+                 data-sexo="macho">
+
+                <div class="foto">
+
+                    <img
+                        src="https://images.unsplash.com/photo-1561948955-570b270e7c36?auto=format&fit=crop&w=500&q=80"
+                        alt="Simba"
+                    >
+
+                </div>
+
+                <div class="popup">
+
+                    <h3>Simba 🐱</h3>
+
+                    <p><strong>Idade:</strong> 3 anos</p>
+
+                    <p><strong>Sexo:</strong> Macho</p>
+
+                    <p><strong>Encontrado:</strong> Próximo ao abrigo.</p>
+
+                    <p>
+                        <strong>Personalidade:</strong>
+                        Calmo, independente e carinhoso.
+                    </p>
+
+                    <button onclick="adotar('Simba')">
+                        QUERO ADOTAR ❤️
+                    </button>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- MEL -->
+
+            <div class="animal"
+                 data-tipo="cachorro"
+                 data-idade="3"
+                 data-sexo="femea">
+
+                <div class="foto">
+
+                    <img
+                        src="https://images.unsplash.com/photo-1543466835-00a7907e9de1?auto=format&fit=crop&w=500&q=80"
+                        alt="Mel"
+                    >
+
+                </div>
+
+                <div class="popup">
+
+                    <h3>Mel 🐶</h3>
+
+                    <p><strong>Idade:</strong> 3 anos</p>
+
+                    <p><strong>Sexo:</strong> Fêmea</p>
+
+                    <p><strong>Encontrada:</strong> Próxima a uma estrada.</p>
+
+                    <p>
+                        <strong>Personalidade:</strong>
+                        Dócil, alegre e muito carinhosa.
+                    </p>
+
+                    <button onclick="adotar('Mel')">
+                        QUERO ADOTAR ❤️
+                    </button>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- NINA -->
+
+            <div class="animal"
+                 data-tipo="gato"
+                 data-idade="2"
+                 data-sexo="femea">
+
+                <div class="foto">
+
+                    <img
+                        src="https://images.unsplash.com/photo-1519052537078-e6302a4968d4?auto=format&fit=crop&w=500&q=80"
+                        alt="Nina"
+                    >
+
+                </div>
+
+                <div class="popup">
+
+                    <h3>Nina 🐱</h3>
+
+                    <p><strong>Idade:</strong> 2 anos</p>
+
+                    <p><strong>Sexo:</strong> Fêmea</p>
+
+                    <p><strong>Encontrada:</strong> Em um terreno vazio.</p>
+
+                    <p>
+                        <strong>Personalidade:</strong>
+                        Tranquila, carinhosa e tímida.
+                    </p>
+
+                    <button onclick="adotar('Nina')">
+                        QUERO ADOTAR ❤️
+                    </button>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- MAX -->
+
+            <div class="animal"
+                 data-tipo="cachorro"
+                 data-idade="7"
+                 data-sexo="macho">
+
+                <div class="foto">
+
+                    <img
+                        src="https://images.unsplash.com/photo-1548199973-03cce0bbc87b?auto=format&fit=crop&w=500&q=80"
+                        alt="Max"
+                    >
+
+                </div>
+
+                <div class="popup">
+
+                    <h3>Max 🐶</h3>
+
+                    <p><strong>Idade:</strong> 7 anos</p>
+
+                    <p><strong>Sexo:</strong> Macho</p>
+
+                    <p><strong>Encontrado:</strong> Próximo a um parque.</p>
+
+                    <p>
+                        <strong>Personalidade:</strong>
+                        Calmo, carinhoso e muito companheiro.
+                    </p>
+
+                    <button onclick="adotar('Max')">
+                        QUERO ADOTAR ❤️
+                    </button>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- TOBY -->
+
+            <div class="animal"
+                 data-tipo="cachorro"
+                 data-idade="1"
+                 data-sexo="macho">
+
+                <div class="foto">
+
+                    <img
+                        src="https://images.unsplash.com/photo-1583511655857-d19b40a7a54e?auto=format&fit=crop&w=500&q=80"
+                        alt="Toby"
+                    >
+
+                </div>
+
+                <div class="popup">
+
+                    <h3>Toby 🐶</h3>
+
+                    <p><strong>Idade:</strong> 1 ano</p>
+
+                    <p><strong>Sexo:</strong> Macho</p>
+
+                    <p><strong>Encontrado:</strong> Resgatado de uma rua movimentada.</p>
+
+                    <p>
+                        <strong>Personalidade:</strong>
+                        Alegre, brincalhão e muito dócil.
+                    </p>
+
+                    <button onclick="adotar('Toby')">
+                        QUERO ADOTAR ❤️
+                    </button>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- DUKE -->
+
+            <div class="animal"
+                 data-tipo="cachorro"
+                 data-idade="10"
+                 data-sexo="macho">
+
+                <div class="foto">
+
+                    <img
+                        src="https://images.unsplash.com/photo-1558788353-f76d92427f16?auto=format&fit=crop&w=500&q=80"
+                        alt="Duke"
+                    >
+
+                </div>
+
+                <div class="popup">
+
+                    <h3>Duke 🐶</h3>
+
+                    <p><strong>Idade:</strong> 10 anos</p>
+
+                    <p><strong>Sexo:</strong> Macho</p>
+
+                    <p><strong>Encontrado:</strong> Próximo a uma residência.</p>
+
+                    <p>
+                        <strong>Personalidade:</strong>
+                        Tranquilo, gentil e carinhoso.
+                    </p>
+
+                    <button onclick="adotar('Duke')">
+                        QUERO ADOTAR ❤️
+                    </button>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- MIA -->
+
+            <div class="animal"
+                 data-tipo="gato"
+                 data-idade="5"
+                 data-sexo="femea">
+
+                <div class="foto">
+
+                    <img
+                        src="https://images.unsplash.com/photo-1495360010541-f48722b34f7d?auto=format&fit=crop&w=500&q=80"
+                        alt="Mia"
+                    >
+
+                </div>
+
+                <div class="popup">
+
+                    <h3>Mia 🐱</h3>
+
+                    <p><strong>Idade:</strong> 5 anos</p>
+
+                    <p><strong>Sexo:</strong> Fêmea</p>
+
+                    <p><strong>Encontrada:</strong> Em uma praça.</p>
+
+                    <p>
+                        <strong>Personalidade:</strong>
+                        Carinhosa, tranquila e independente.
+                    </p>
+
+                    <button onclick="adotar('Mia')">
+                        QUERO ADOTAR ❤️
+                    </button>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- OLIVER -->
+
+            <div class="animal"
+                 data-tipo="gato"
+                 data-idade="8"
+                 data-sexo="macho">
+
+                <div class="foto">
+
+                    <img
+                        src="https://images.unsplash.com/photo-1518791841217-8f162f1e1131?auto=format&fit=crop&w=500&q=80"
+                        alt="Oliver"
+                    >
+
+                </div>
+
+                <div class="popup">
+
+                    <h3>Oliver 🐱</h3>
+
+                    <p><strong>Idade:</strong> 8 anos</p>
+
+                    <p><strong>Sexo:</strong> Macho</p>
+
+                    <p><strong>Encontrado:</strong> Próximo a uma escola.</p>
+
+                    <p>
+                        <strong>Personalidade:</strong>
+                        Calmo, amigável e carinhoso.
+                    </p>
+
+                    <button onclick="adotar('Oliver')">
+                        QUERO ADOTAR ❤️
+                    </button>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- TOM -->
+
+            <div class="animal"
+                 data-tipo="gato"
+                 data-idade="11"
+                 data-sexo="macho">
+
+                <div class="foto">
+
+                    <img
+                        src="https://images.unsplash.com/photo-1573865526739-10659fec78a5?auto=format&fit=crop&w=500&q=80"
+                        alt="Tom"
+                    >
+
+                </div>
+
+                <div class="popup">
+
+                    <h3>Tom 🐱</h3>
+
+                    <p><strong>Idade:</strong> 11 anos</p>
+
+                    <p><strong>Sexo:</strong> Macho</p>
+
+                    <p><strong>Encontrado:</strong> Próximo a uma casa abandonada.</p>
+
+                    <p>
+                        <strong>Personalidade:</strong>
+                        Muito tranquilo, dócil e companheiro.
+                    </p>
+
+                    <button onclick="adotar('Tom')">
+                        QUERO ADOTAR ❤️
+                    </button>
+
+                </div>
+
+            </div>
+
+
+        </div>
+
+    </section>
+
+
+
+    <script>
+
+
+        function abrirMenu() {
+
+            const nav = document.querySelector('.nav');
+
+            nav.classList.toggle('ativo');
+
+        }
+
+
+
+        function adotar(nome) {
+
+            window.location.href = "login.html";
+
+        }
+
+
+
+        /* FILTRO DOS ANIMAIS */
+
+        function filtrarAnimais() {
+
+            const tipoSelecionado =
+                document.getElementById("tipo-animal").value;
+
+            const idadeSelecionada =
+                document.getElementById("idade-animal").value;
+
+            const sexoSelecionado =
+                document.getElementById("sexo-animal").value;
+
+
+            const animais =
+                document.querySelectorAll(".animal");
+
+
+            animais.forEach(function(animal) {
+
+                const tipo =
+                    animal.getAttribute("data-tipo");
+
+                const idade =
+                    Number(animal.getAttribute("data-idade"));
+
+                const sexo =
+                    animal.getAttribute("data-sexo");
+
+
+                let tipoCorreto = false;
+
+                let idadeCorreta = false;
+
+                let sexoCorreto = false;
+
+
+
+                /* TIPO */
+
+                if (
+                    tipoSelecionado === "todos" ||
+                    tipo === tipoSelecionado
+                ) {
+
+                    tipoCorreto = true;
+
+                }
+
+
+
+                /* IDADE */
+
+                if (idadeSelecionada === "todas") {
+
+                    idadeCorreta = true;
+
+                }
+
+                else if (idadeSelecionada === "0-3") {
+
+                    idadeCorreta =
+                        idade >= 0 && idade <= 3;
+
+                }
+
+                else if (idadeSelecionada === "3-9") {
+
+                    idadeCorreta =
+                        idade > 3 && idade <= 9;
+
+                }
+
+                else if (idadeSelecionada === "9-13") {
+
+                    idadeCorreta =
+                        idade > 9 && idade <= 13;
+
+                }
+
+
+
+                /* SEXO */
+
+                if (
+                    sexoSelecionado === "todos" ||
+                    sexo === sexoSelecionado
+                ) {
+
+                    sexoCorreto = true;
+
+                }
+
+
+
+                /* MOSTRAR OU ESCONDER */
+
+                if (
+                    tipoCorreto &&
+                    idadeCorreta &&
+                    sexoCorreto
+                ) {
+
+                    animal.style.display = "block";
+
+                }
+
+                else {
+
+                    animal.style.display = "none";
+
+                }
+
+            });
+
+        }
+
+
+    </script>
+
+
+</body>
+
+</html>

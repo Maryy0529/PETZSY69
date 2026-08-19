@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Pagamento | Petszy</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Fascinate+Inline&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+    <header class="header-petszy">
+
+    <a href="#" class="logo">
+        Petszy
+    </a>
+
+    <nav class="nav">
+
+        <a href="index.html">Home</a>
+
+        <a href="Queradotar.html">Quer adotar?</a>
+
+        <a href="Querajudar.html">Quer ajudar?</a>
+
+        <a href="login.html">Login</a>
+
+    </nav>
+
+</header>
+
+<div class="caixa">
+
+    <h1>Fazer Doação</h1>
+
+    <div class="valores">
+
+    <button class="valor" onclick="selecionarValor(10)">
+        R$10
+    </button>
+
+    <button class="valor" onclick="selecionarValor(20)">
+        R$20
+    </button>
+
+    <button class="valor" onclick="selecionarValor(50)">
+        R$50
+    </button>
+
+    <button class="valor" onclick="selecionarValor(100)">
+        R$100
+    </button>
+
+</div>
+
+<input
+type="number"
+id="valor-personalizado"
+placeholder="Digite outro valor"
+style="
+width: 100%;
+height: 50px;
+margin-bottom: 20px;
+border-radius: 12px;
+border: 2px solid #ccc;
+padding: 10px;
+font-size: 16px;
+">
+
+    <select id="formaPagamento" onchange="mostrarPagamento()">
+
+    <option value="">Escolha a forma de pagamento</option>
+    <option value="pix">PIX</option>
+    <option value="credito">Cartão de Crédito</option>
+    <option value="debito">Cartão de Débito</option>
+    <option value="boleto">Boleto Bancário</option>
+
+    </select>
+
+    <div id="infoPagamento"></div>
+
+    <button class="btn-pagar" onclick="confirmarDoacao()">
+    Confirmar Doação
+    </button>
+
+    <div class="caixa-postal">
+
+    <h3>Envio de Doações</h3>
+
+    <p>
+        Petszy <br>
+        Caixa Postal 4500 <br>
+        CEP 04012-970 <br>
+        Ribeirão Preto - SP
+    </p>
+
+</div>
+
+</div>
+
+<script>
+
+let valorSelecionado = 0;
+
+function selecionarValor(valor) {
+    valorSelecionado = valor;
+    document.getElementById("valor-personalizado").value = valor;
+}
+
+function mostrarPagamento() {
+
+    let forma = document.getElementById("formaPagamento").value;
+    let info = document.getElementById("infoPagamento");
+
+    if (forma === "pix") {
+
+        info.innerHTML = `
+            <div style="margin-bottom:20px;">
+                <h3>Chave PIX</h3>
+                <p><b>petszy.doações@gmail.com</b></p>
+            </div>
+        `;
+
+    }
+
+    else if (forma === "boleto") {
+
+        info.innerHTML = `
+            <div style="margin-bottom:20px;">
+                <h3>Código de Barras</h3>
+                <p>34191.79001 01043.510047 91020.150008 8 98770000010000</p>
+            </div>
+        `;
+
+    }
+
+    else if (forma === "credito" || forma === "debito") {
+
+        info.innerHTML = `
+
+            <input type="text"
+            placeholder="Nome no cartão"
+            style="width:100%;height:45px;margin-bottom:10px;padding:10px;">
+
+            <input type="text"
+            placeholder="Número do cartão"
+            style="width:100%;height:45px;margin-bottom:10px;padding:10px;">
+
+            <input type="text"
+            placeholder="Validade (MM/AA)"
+            style="width:48%;height:45px;margin-bottom:10px;padding:10px;">
+
+            <input type="text"
+            placeholder="CVV"
+            style="width:48%;height:45px;margin-bottom:10px;padding:10px;float:right;">
+        `;
+    }
+
+    else {
+        info.innerHTML = "";
+    }
+}
+
+function confirmarDoacao() {
+
+    let valor = document.getElementById("valor-personalizado").value;
+
+    if(valor == "" || valor <= 0){
+        alert("Digite ou selecione um valor para doar.");
+        return;
+    }
+
+    alert("Doação de R$" + valor + " confirmada! Obrigado por ajudar os pets.");
+}
+
+</script>
+
+</body>
+</html>
