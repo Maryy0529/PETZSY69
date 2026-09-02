@@ -2,59 +2,38 @@
 <html lang="pt-br">
 
 <head>
-
     <meta charset="UTF-8">
-
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <title>Quer Adotar | Petszy</title>
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
-
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
     <link href="https://fonts.googleapis.com/css2?family=Fascinate+Inline&display=swap" rel="stylesheet">
 
     <link rel="stylesheet" href="style.css">
-
 </head>
 
-
 <body class="adotar">
-
-
-    <!-- CABEÇALHO -->
 
     <header class="adotar-header">
 
         <a href="#" class="logo">Petszy</a>
 
         <nav class="nav">
-
             <a href="index.html">Home</a>
-
             <a href="queradotar.html">Quer adotar?</a>
-
             <a href="querajudar.html">Quer ajudar?</a>
-
             <a href="contato.html">Contato</a>
-
         </nav>
 
-
         <div class="menu-hamburguer" onclick="abrirMenu()">
-
             <div class="linha"></div>
             <div class="linha"></div>
             <div class="linha"></div>
-
         </div>
 
     </header>
-
-
-
-    <!-- CONTEÚDO -->
 
     <section class="adotar">
 
@@ -64,606 +43,306 @@
             Passe o mouse sobre os animais para conhecer mais sobre eles!
         </p>
 
-
-
-        <!-- FILTROS -->
-
         <div class="filtros">
 
-            <!-- FILTRO ANIMAL -->
-
             <div class="filtro">
-
                 <label for="tipo-animal">Animal:</label>
 
                 <select id="tipo-animal" onchange="filtrarAnimais()">
-
                     <option value="todos">Todos</option>
-
                     <option value="cachorro">🐶 Cachorros</option>
-
                     <option value="gato">🐱 Gatos</option>
-
                 </select>
-
             </div>
 
-
-            <!-- FILTRO IDADE -->
-
             <div class="filtro">
-
                 <label for="idade-animal">Idade:</label>
 
                 <select id="idade-animal" onchange="filtrarAnimais()">
-
                     <option value="todas">Todas as idades</option>
-
                     <option value="0-3">0 a 3 anos</option>
-
                     <option value="3-9">3 a 9 anos</option>
-
                     <option value="9-13">9 a 13 anos</option>
-
                 </select>
-
             </div>
 
-
-            <!-- FILTRO SEXO -->
-
             <div class="filtro">
-
                 <label for="sexo-animal">Sexo:</label>
 
                 <select id="sexo-animal" onchange="filtrarAnimais()">
-
                     <option value="todos">Todos</option>
-
                     <option value="femea">♀ Fêmeas</option>
-
                     <option value="macho">♂ Machos</option>
-
                 </select>
-
             </div>
 
         </div>
 
-
-
-        <!-- ANIMAIS -->
-
         <div class="animais-container">
 
-
-
-            <!-- THOR -->
-
-            <div class="animal"
-                 data-tipo="cachorro"
-                 data-idade="13"
-                 data-sexo="macho">
+            <div class="animal" data-tipo="cachorro" data-idade="13" data-sexo="macho">
 
                 <div class="foto">
-
-                    <img
-                        src="c:\Users\YASMINGUERINOLINIEVI\Downloads\WhatsApp Image 2026-08-31 at 10.01.34.jpeg"
-                        alt="Diego"
-                    >
-
+                    <img src="img/WhatsApp Image 2026-08-31 at 10.01.34.jpeg" alt="Diego">
                 </div>
 
                 <div class="popup">
-
                     <h3>Diego 🐶</h3>
-
                     <p><strong>Idade:</strong> 13 anos</p>
-
                     <p><strong>Sexo:</strong> Macho</p>
-
                     <p><strong>Encontrado:</strong> Próximo a uma praça.</p>
-
-                    <p>
-                        <strong>Personalidade:</strong>
-                        Preguiçoso, carinhoso e muito calmo.
-                    </p>
+                    <p><strong>Personalidade:</strong> Preguiçoso, carinhoso e muito calmo.</p>
 
                     <button onclick="adotar('Diego')">
                         QUERO ADOTAR ❤️
                     </button>
-
                 </div>
 
             </div>
 
-
-
-            <!-- BOB -->
-
-            <div class="animal"
-                 data-tipo="cachorro"
-                 data-idade="6"
-                 data-sexo="femea">
+            <div class="animal" data-tipo="cachorro" data-idade="6" data-sexo="femea">
 
                 <div class="foto">
-
-                    <img
-                        src="c:\Users\YASMINGUERINOLINIEVI\Downloads\WhatsApp Image 2026-08-17 at 09.34.16 (1).jpeg"
-                        alt="Bolinha"
-                    >
-
+                    <img src="img/WhatsApp Image 2026-08-17 at 09.34.16 (1).jpeg" alt="Bolinha">
                 </div>
 
                 <div class="popup">
-
                     <h3>Bolinha 🐶</h3>
-
                     <p><strong>Idade:</strong> 6 anos</p>
-
-                    <p><strong>Sexo:</strong> femea</p>
-
-                    <p><strong>Encontrada:</strong> Resgatado enquanto andava sozinho.</p>
-
-                    <p>
-                        <strong>Personalidade:</strong>
-                        Brincalhona, carinhosa e hiperativo.
-                    </p>
+                    <p><strong>Sexo:</strong> Fêmea</p>
+                    <p><strong>Encontrada:</strong> Resgatada enquanto andava sozinha.</p>
+                    <p><strong>Personalidade:</strong> Brincalhona, carinhosa e hiperativa.</p>
 
                     <button onclick="adotar('Bolinha')">
                         QUERO ADOTAR ❤️
                     </button>
-
                 </div>
 
             </div>
 
-
-
-            <!-- LUNA -->
-
-            <div class="animal"
-                 data-tipo="gato"
-                 data-idade="10"
-                 data-sexo="femea">
+            <div class="animal" data-tipo="gato" data-idade="10" data-sexo="femea">
 
                 <div class="foto">
-
-                    <img
-                        src="c:\Users\YASMINGUERINOLINIEVI\Downloads\WhatsApp Image 2026-08-31 at 09.59.05.jpeg"
-                        alt="Nutella"
-                    >
-
+                    <img src="img/WhatsApp Image 2026-08-31 at 09.59.05.jpeg" alt="Nutella">
                 </div>
 
                 <div class="popup">
-
                     <h3>Nutella 🐱</h3>
-
                     <p><strong>Idade:</strong> 10 anos</p>
-
                     <p><strong>Sexo:</strong> Fêmea</p>
-
                     <p><strong>Encontrada:</strong> Em frente a uma casa.</p>
-
-                    <p>
-                        <strong>Personalidade:</strong>
-                        Curiosa, carinhosa e brincalhona.
-                    </p>
+                    <p><strong>Personalidade:</strong> Curiosa, carinhosa e brincalhona.</p>
 
                     <button onclick="adotar('Nutella')">
                         QUERO ADOTAR ❤️
                     </button>
-
                 </div>
 
             </div>
 
-
-
-            <!-- SIMBA -->
-
-            <div class="animal"
-                 data-tipo="cachorro"
-                 data-idade="8"
-                 data-sexo="macho">
+            <div class="animal" data-tipo="cachorro" data-idade="8" data-sexo="macho">
 
                 <div class="foto">
-
-                    <img
-                        src="c:\Users\YASMINGUERINOLINIEVI\Downloads\WhatsApp Image 2026-08-31 at 09.47.46.jpeg"
-                        alt="Rock"
-                    >
-
+                    <img src="img/WhatsApp Image 2026-08-31 at 09.47.46.jpeg" alt="Rock">
                 </div>
 
                 <div class="popup">
-
                     <h3>Rock 🐶</h3>
-
                     <p><strong>Idade:</strong> 8 anos</p>
-
                     <p><strong>Sexo:</strong> Macho</p>
-
                     <p><strong>Encontrado:</strong> Próximo ao abrigo.</p>
-
-                    <p>
-                        <strong>Personalidade:</strong>
-                        Timido, brincalhão e manhoso.
-                    </p>
+                    <p><strong>Personalidade:</strong> Tímido, brincalhão e manhoso.</p>
 
                     <button onclick="adotar('Rock')">
                         QUERO ADOTAR ❤️
                     </button>
-
                 </div>
 
             </div>
 
-
-
-            <!-- MEL -->
-
-            <div class="animal"
-                 data-tipo="cachorro"
-                 data-idade="7"
-                 data-sexo="femea">
+            <div class="animal" data-tipo="cachorro" data-idade="7" data-sexo="femea">
 
                 <div class="foto">
-
-                    <img
-                        src="c:\Users\YASMINGUERINOLINIEVI\Downloads\WhatsApp Image 2026-08-31 at 09.49.53.jpeg"
-                        alt="Lolla"
-                    >
-
+                    <img src="img/WhatsApp Image 2026-08-31 at 09.49.53.jpeg" alt="Lolla">
                 </div>
 
                 <div class="popup">
-
                     <h3>Lolla 🐶</h3>
-
                     <p><strong>Idade:</strong> 7 anos</p>
-
                     <p><strong>Sexo:</strong> Fêmea</p>
-
                     <p><strong>Encontrada:</strong> Próxima a uma estrada.</p>
-
-                    <p>
-                        <strong>Personalidade:</strong>
-                        Dócil, alegre e muito carente.
-                    </p>
+                    <p><strong>Personalidade:</strong> Dócil, alegre e muito carente.</p>
 
                     <button onclick="adotar('Lolla')">
                         QUERO ADOTAR ❤️
                     </button>
-
                 </div>
 
             </div>
 
-
-
-            <!-- MARY --->
-
-            <div class="animal"
-                 data-tipo="gato"
-                 data-idade="12"
-                 data-sexo="femea">
+            <div class="animal" data-tipo="gato" data-idade="12" data-sexo="femea">
 
                 <div class="foto">
-
-                    <img
-                        src="c:\Users\YASMINGUERINOLINIEVI\Downloads\WhatsApp Image 2026-08-31 at 09.45.41.jpeg"
-                        alt="Mary"
-                    >
-
+                    <img src="img/WhatsApp Image 2026-08-31 at 09.45.41.jpeg" alt="Mary">
                 </div>
 
                 <div class="popup">
-
                     <h3>Mary 🐱</h3>
-
                     <p><strong>Idade:</strong> 12 anos</p>
-
                     <p><strong>Sexo:</strong> Fêmea</p>
-
                     <p><strong>Encontrada:</strong> Em um terreno vazio.</p>
-
-                    <p>
-                        <strong>Personalidade:</strong>
-                        Tranquila, carinhosa e tímida.
-                    </p>
+                    <p><strong>Personalidade:</strong> Tranquila, carinhosa e tímida.</p>
 
                     <button onclick="adotar('Mary')">
                         QUERO ADOTAR ❤️
                     </button>
-
                 </div>
 
             </div>
 
-
-
-            <!-- LUA -->
-
-            <div class="animal"
-                 data-tipo="cachorro"
-                 data-idade="5"
-                 data-sexo="femea">
+            <div class="animal" data-tipo="cachorro" data-idade="5" data-sexo="femea">
 
                 <div class="foto">
-
-                    <img
-                        src="c:\Users\YASMINGUERINOLINIEVI\Downloads\WhatsApp Image 2026-08-17 at 09.31.54.jpeg"
-                        alt="Lua"
-                    >
-
+                    <img src="img/WhatsApp Image 2026-08-17 at 09.31.54.jpeg" alt="Lua">
                 </div>
 
                 <div class="popup">
-
                     <h3>Lua 🐶</h3>
-
                     <p><strong>Idade:</strong> 5 anos</p>
-
-                    <p><strong>Sexo:</strong> femea</p>
-
+                    <p><strong>Sexo:</strong> Fêmea</p>
                     <p><strong>Encontrada:</strong> Próxima a um parque.</p>
-
-                    <p>
-                        <strong>Personalidade:</strong>
-                        Calma, carinhosa e muito companheira.
-                    </p>
+                    <p><strong>Personalidade:</strong> Calma, carinhosa e muito companheira.</p>
 
                     <button onclick="adotar('Lua')">
                         QUERO ADOTAR ❤️
                     </button>
-
                 </div>
 
             </div>
 
-
-
-            <!-- TOBY -->
-
-            <div class="animal"
-                 data-tipo="cachorro"
-                 data-idade="1"
-                 data-sexo="macho">
+            <div class="animal" data-tipo="cachorro" data-idade="1" data-sexo="macho">
 
                 <div class="foto">
-
-                    <img
-                        src="c:\Users\YASMINGUERINOLINIEVI\Downloads\WhatsApp Image 2026-08-17 at 09.24.41.jpeg"
-                        alt="Neneco"
-                    >
-
+                    <img src="img/WhatsApp Image 2026-08-17 at 09.24.41.jpeg" alt="Neneco">
                 </div>
 
                 <div class="popup">
-
                     <h3>Neneco 🐶</h3>
-
                     <p><strong>Idade:</strong> 1 ano</p>
-
                     <p><strong>Sexo:</strong> Macho</p>
-
                     <p><strong>Encontrado:</strong> Resgatado de uma rua movimentada.</p>
-
-                    <p>
-                        <strong>Personalidade:</strong>
-                        Alegre, brincalhão e muito dócil.
-                    </p>
+                    <p><strong>Personalidade:</strong> Alegre, brincalhão e muito dócil.</p>
 
                     <button onclick="adotar('Neneco')">
                         QUERO ADOTAR ❤️
                     </button>
-
                 </div>
 
             </div>
 
-
-
-            <!-- DUKE -->
-
-            <div class="animal"
-                 data-tipo="cachorro"
-                 data-idade="2"
-                 data-sexo="macho">
+            <div class="animal" data-tipo="cachorro" data-idade="2" data-sexo="macho">
 
                 <div class="foto">
-
-                    <img
-                        src="c:\Users\YASMINGUERINOLINIEVI\Downloads\WhatsApp Image 2026-08-17 at 09.47.21.jpeg"
-                        alt="Bartholomeu"
-                    >
-
+                    <img src="img/WhatsApp Image 2026-08-17 at 09.47.21.jpeg" alt="Bartholomeu">
                 </div>
 
                 <div class="popup">
-
                     <h3>Bartholomeu 🐶</h3>
-
                     <p><strong>Idade:</strong> 2 anos</p>
-
                     <p><strong>Sexo:</strong> Macho</p>
-
                     <p><strong>Encontrado:</strong> Próximo a uma residência.</p>
-
-                    <p>
-                        <strong>Personalidade:</strong>
-                        Tranquilo, gentil e carinhoso.
-                    </p>
+                    <p><strong>Personalidade:</strong> Tranquilo, gentil e carinhoso.</p>
 
                     <button onclick="adotar('Bartholomeu')">
                         QUERO ADOTAR ❤️
                     </button>
-
                 </div>
 
             </div>
 
-
-
-            <!-- MIA -->
-
-            <div class="animal"
-                 data-tipo="gato"
-                 data-idade="3"
-                 data-sexo="Macho">
+            <div class="animal" data-tipo="gato" data-idade="3" data-sexo="macho">
 
                 <div class="foto">
-
-                    <img
-                        src="c:\Users\YASMINGUERINOLINIEVI\Downloads\WhatsApp Image 2026-08-31 at 09.31.11.jpeg"
-                        alt="Loki"
-                    >
-
+                    <img src="img/WhatsApp Image 2026-08-31 at 09.31.11.jpeg" alt="Loki">
                 </div>
 
                 <div class="popup">
-
                     <h3>Loki 🐱</h3>
-
                     <p><strong>Idade:</strong> 3 anos</p>
-
                     <p><strong>Sexo:</strong> Macho</p>
-
                     <p><strong>Encontrado:</strong> Em uma praça.</p>
-
-                    <p>
-                        <strong>Personalidade:</strong>
-                        Carinhoso, tranquilo e independente. Gosta de fugir
-                    </p>
+                    <p><strong>Personalidade:</strong> Carinhoso, tranquilo e independente. Gosta de fugir.</p>
 
                     <button onclick="adotar('Loki')">
                         QUERO ADOTAR ❤️
                     </button>
-
                 </div>
 
             </div>
 
-
-
-            <!-- OLIVER -->
-
-            <div class="animal"
-                 data-tipo="gato"
-                 data-idade="1"
-                 data-sexo="macho">
+            <div class="animal" data-tipo="gato" data-idade="1" data-sexo="macho">
 
                 <div class="foto">
-
-                    <img
-                        src="c:\Users\YASMINGUERINOLINIEVI\Downloads\WhatsApp Image 2026-08-17 at 09.47.53.jpeg"
-                        alt="Peralta"
-                    >
-
+                    <img src="img/WhatsApp Image 2026-08-17 at 09.47.53.jpeg" alt="Peralta">
                 </div>
 
                 <div class="popup">
-
                     <h3>Peralta 🐱</h3>
-
                     <p><strong>Idade:</strong> 1 ano</p>
-
                     <p><strong>Sexo:</strong> Macho</p>
-
                     <p><strong>Encontrado:</strong> Próximo a uma escola.</p>
-
-                    <p>
-                        <strong>Personalidade:</strong>
-                        Calmo, amigável e carinhoso.
-                    </p>
+                    <p><strong>Personalidade:</strong> Calmo, amigável e carinhoso.</p>
 
                     <button onclick="adotar('Peralta')">
                         QUERO ADOTAR ❤️
                     </button>
-
                 </div>
 
             </div>
 
-
-
-            <!-- TOM -->
-
-            <div class="animal"
-                 data-tipo="gato"
-                 data-idade="1"
-                 data-sexo="macho">
+            <div class="animal" data-tipo="gato" data-idade="1" data-sexo="macho">
 
                 <div class="foto">
-
-                    <img
-                        src="c:\Users\YASMINGUERINOLINIEVI\Downloads\WhatsApp Image 2026-08-17 at 09.57.06.jpeg"
-                        alt="Jose Leonardo"
-                    >
-
+                    <img src="img/WhatsApp Image 2026-08-17 at 09.57.06.jpeg" alt="Jose Leonardo">
                 </div>
 
                 <div class="popup">
-
                     <h3>Jose Leonardo 🐱</h3>
-
                     <p><strong>Idade:</strong> 1 ano</p>
-
                     <p><strong>Sexo:</strong> Macho</p>
-
                     <p><strong>Encontrado:</strong> Próximo a uma casa abandonada.</p>
-
-                    <p>
-                        <strong>Personalidade:</strong>
-                        Bobalhão, hiperativo, gosta de correr.
-                    </p>
+                    <p><strong>Personalidade:</strong> Bobalhão, hiperativo, gosta de correr.</p>
 
                     <button onclick="adotar('Jose Leonardo')">
                         QUERO ADOTAR ❤️
                     </button>
-
                 </div>
 
             </div>
-
 
         </div>
 
     </section>
 
-
-
     <script>
 
-
         function abrirMenu() {
-
             const nav = document.querySelector('.nav');
-
             nav.classList.toggle('ativo');
-
         }
-
-
 
         function adotar(nome) {
 
             const numeroWhatsApp = "5516992944561";
 
-            const mensagem = `Olá! Gostaria de adotar o ${nome} 🐾❤️`;
+            const mensagem =
+                `Olá! Gostaria de adotar o ${nome} 🐾❤️`;
 
             const linkWhatsApp =
                 `https://wa.me/${numeroWhatsApp}?text=${encodeURIComponent(mensagem)}`;
 
             window.open(linkWhatsApp, "_blank");
-
         }
-
-
-
-        /* FILTRO DOS ANIMAIS */
 
         function filtrarAnimais() {
 
@@ -676,10 +355,8 @@
             const sexoSelecionado =
                 document.getElementById("sexo-animal").value;
 
-
             const animais =
                 document.querySelectorAll(".animal");
-
 
             animais.forEach(function(animal) {
 
@@ -692,97 +369,59 @@
                 const sexo =
                     animal.getAttribute("data-sexo");
 
-
                 let tipoCorreto = false;
-
                 let idadeCorreta = false;
-
                 let sexoCorreto = false;
-
-
-
-                /* TIPO */
 
                 if (
                     tipoSelecionado === "todos" ||
                     tipo === tipoSelecionado
                 ) {
-
                     tipoCorreto = true;
-
                 }
-
-
-
-                /* IDADE */
 
                 if (idadeSelecionada === "todas") {
 
                     idadeCorreta = true;
 
-                }
-
-                else if (idadeSelecionada === "0-3") {
+                } else if (idadeSelecionada === "0-3") {
 
                     idadeCorreta =
                         idade >= 0 && idade <= 3;
 
-                }
-
-                else if (idadeSelecionada === "3-9") {
+                } else if (idadeSelecionada === "3-9") {
 
                     idadeCorreta =
                         idade > 3 && idade <= 9;
 
-                }
-
-                else if (idadeSelecionada === "9-13") {
+                } else if (idadeSelecionada === "9-13") {
 
                     idadeCorreta =
                         idade > 9 && idade <= 13;
-
                 }
-
-
-
-                /* SEXO */
 
                 if (
                     sexoSelecionado === "todos" ||
                     sexo === sexoSelecionado
                 ) {
-
                     sexoCorreto = true;
-
                 }
-
-
-
-                /* MOSTRAR OU ESCONDER */
 
                 if (
                     tipoCorreto &&
                     idadeCorreta &&
                     sexoCorreto
                 ) {
-
                     animal.style.display = "block";
-
-                }
-
-                else {
-
+                } else {
                     animal.style.display = "none";
-
                 }
 
             });
 
         }
 
-
     </script>
-
 
 </body>
 
