@@ -4923,3 +4923,10 @@ header .menu-hamburguer:hover .linha,
         background-attachment: scroll !important;
     }
 }
+ /* ==========================================================
+   AJUSTE DO CONTEÚDO — PÁGINA QUER ADOTAR
+   ========================================================== */
+
+body.adotar > section.adotar {
+    padding-top: 80px;
+}
