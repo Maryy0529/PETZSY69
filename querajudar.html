@@ -1,121 +1,134 @@
 <!DOCTYPE html>
+
 <html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Quer Ajudar | Petszy</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Fascinate+Inline&display=swap" rel="stylesheet">
+```
+<title>Quer Ajudar | Petszy</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fascinate+Inline&display=swap" rel="stylesheet">
 
-    <link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="style.css">
+```
+
 </head>
 
 <body class="ajudar">
 
 <header class="ajudar-header">
 
-    <a href="#" class="logo">
-        Petszy
-    </a>
+```
+<a href="#" class="logo">
+    Petszy
+</a>
 
-    <nav class="nav">
-    <a href="index.html">Home</a>
-    <a href="queradotar.html">Quer adotar?</a>
-    <a href="querajudar.html">Quer ajudar?</a>
-    <a href="contato.html">Contato</a>
+<nav class="nav">
+<a href="index.html">Home</a>
+<a href="queradotar.html">Quer adotar?</a>
+<a href="querajudar.html">Quer ajudar?</a>
+<a href="contato.html">Contato</a>
+```
+
 </nav>
 
 </header>
 
 <section class="hero-ajuda">
 
-    <h2 class="titulo-hero">
-        AJUDE NOSSA ONG
-    </h2>
+```
+<h2 class="titulo-hero">
+    AJUDE NOSSA ONG
+</h2>
 
-    <div class="como-doar">
-        COMO<br>DOAR?
-    </div>
+<div class="como-doar">
+    COMO<br>DOAR?
+</div>
+```
 
 </section>
 
 <section class="container-ajuda">
 
-    <div class="card-ajuda">
+```
+<div class="card-ajuda">
 
-        <h1>
-            DOAR EM<br>
-            DINHEIRO:
-        </h1>
+    <h1>
+        DOAR EM<br>
+        DINHEIRO:
+    </h1>
 
-        <button class="btn-doar" onclick="irParaPagamento()">
-            Doar
-        </button>
+    <button class="btn-doar" onclick="doarDinheiro()">
+        Doar
+    </button>
 
-        <div class="balao">
+    <div class="balao">
 
-            <div class="pix-box">
+        <div class="pix-box">
 
-                <h3>FORMAS DE PAGAMENTO:</h3>
+            <h3>FORMAS DE PAGAMENTO:</h3>
 
-                <div class="pagamentos">
-                    - PIX <br>
-                    - Cartão de Crédito <br>
-                    - Cartão de Débito <br>
-                    - Boleto Bancário
-                </div>
-
+            <div class="pagamentos">
+                - PIX <br>
+                - Cartão de Crédito <br>
+                - Cartão de Débito <br>
+                - Boleto Bancário
             </div>
 
         </div>
 
     </div>
 
-    <div class="card-ajuda">
+</div>
 
-        <h1 class="titulo-produto">
-            DOAR RAÇÃO<br>
-            / BRINQUEDOS
-        </h1>
+<div class="card-ajuda">
 
-        <button class="btn-doar" onclick="irParaPagamento()">
-            Doar
-        </button>
+    <h1 class="titulo-produto">
+        DOAR RAÇÃO<br>
+        / BRINQUEDOS
+    </h1>
 
-        <div class="balao">
+    <button class="btn-doar" onclick="doarProdutos()">
+        Doar
+    </button>
 
-            <div class="pix-box">
+    <div class="balao">
 
-                <h3>OPÇÕES DE DOAÇÕES:</h3>
+        <div class="pix-box">
 
-                <div class="lista">
-                    - Ração para cães <br>
-                    - Ração para gatos <br>
-                    - Brinquedos <br>
-                    - Cobertores
-                </div>
+            <h3>OPÇÕES DE DOAÇÕES:</h3>
 
+            <div class="lista">
+                - Ração para cães <br>
+                - Ração para gatos <br>
+                - Brinquedos <br>
+                - Cobertores
             </div>
 
         </div>
 
     </div>
+
+</div>
+```
 
 </section>
 
 <div class="info-lateral">
 
-    <p>
-        Dinheiro ajuda com cuidados e resgates
-        <br><br>
+```
+<p>
+    Dinheiro ajuda com cuidados e resgates
+    <br><br>
 
-        Ração garante alimentação diária
-        <br><br>
+    Ração garante alimentação diária
+    <br><br>
 
-        Brinquedos trazem conforto e bem-estar
-    </p>
+    Brinquedos trazem conforto e bem-estar
+</p>
+```
 
 </div>
 
@@ -125,14 +138,18 @@ function abrirMenu(){
     nav.classList.toggle('ativo');
 }
 
-function irParaPagamento(){
-    const usuarioLogado = localStorage.getItem("usuarioLogado");
+function doarDinheiro(){
+    window.open(
+        "https://wa.me/5516992944561?text=Ol%C3%A1!%20Gostaria%20de%20fazer%20uma%20doa%C3%A7%C3%A3o%20em%20dinheiro%20para%20a%20Petszy.",
+        "_blank"
+    );
+}
 
-    if(usuarioLogado === "true"){
-        window.location.href = "pagamento.html";
-    }else{
-        window.location.href = "login.html?destino=pagamento.html";
-    }
+function doarProdutos(){
+    window.open(
+        "https://wa.me/5516992944561?text=Ol%C3%A1!%20Gostaria%20de%20doar%20ra%C3%A7%C3%A3o%20ou%20brinquedos%20para%20a%20Petszy.",
+        "_blank"
+    );
 }
 </script>
 
